@@ -1,0 +1,6 @@
+{
+  "name": "API Key Tester",
+  "description": "Công cụ kiểm tra, chẩn đoán lỗi, đo độ trễ Recharts và Chatbot Sandbox thử nghiệm API Key trực quan, an toàn.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

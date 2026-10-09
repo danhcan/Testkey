@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>API Key Tester - Kiểm tra & Chẩn đoán API Key</title>
+    <meta name="description" content="Công cụ kiểm tra, chẩn đoán lỗi, đo độ trễ Recharts và Chatbot Sandbox thử nghiệm API Key trực quan, an toàn." />
+    <meta property="og:title" content="API Key Tester - Kiểm tra & Chẩn đoán API Key" />
+    <meta property="og:description" content="Công cụ kiểm tra, chẩn đoán lỗi, đo độ trễ Recharts và Chatbot Sandbox thử nghiệm API Key trực quan, an toàn." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script>
+      // Ignore Vite client HMR / WebSocket errors in preview iframe
+      window.addEventListener('error', function (e) {
+        if (
+          e?.message?.includes('WebSocket') ||
+          e?.filename?.includes('@vite/client') ||
+          e?.error?.stack?.includes('@vite/client') ||
+          e?.error?.stack?.includes('createWebSocketModuleRunnerTransport')
+        ) {
+          e.preventDefault();
+          e.stopImmediatePropagation();
+        }
+      }, true);
+      window.addEventListener('unhandledrejection', function (e) {
+        var str = String(e?.reason?.message || e?.reason?.stack || e?.reason || '');
+        if (str.includes('WebSocket') || str.includes('@vite/client') || str.includes('ModuleRunner')) {
+          e.preventDefault();
+          e.stopImmediatePropagation();
+        }
+      }, true);
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
